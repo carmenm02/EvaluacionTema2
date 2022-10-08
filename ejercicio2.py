@@ -6,8 +6,7 @@ class Alumno:
         print("Nombre:",self.nombre)
         print("Nota:",self.nota)
     def __str__(self):
-        
-        return
+        return "{} ha sacado un {}".format(self.nombre,self.nota)
     def calificación(self):
         if self.nota >= 5:
             print("Aprobado")
