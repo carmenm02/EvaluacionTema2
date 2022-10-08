@@ -8,6 +8,38 @@ class Vehiculo():
 
         return "color {}, {} ruedas".format( self.color, self.ruedas )
 
-coche = ("rojo",4)
-bicicleta = ("negra",2)
-lista = [coche.__dict__,bicicleta.__dict__]
+class Coche(Vehiculo):
+
+     def __init__(self, color, ruedas, velocidad, cilindrada):
+
+        Vehiculo.__init__(self, color, ruedas)
+
+        self.velocidad = velocidad
+
+        self.cilindrada = cilindrada
+
+def __str__(self):
+    return Vehiculo.__str__(self) + ", {} km/h, {} cc".format(self.velocidad, self.cilindrada)
+
+
+class Bicicleta():
+
+    def __init__(self,color,ruedas,tipo):
+
+        Vehiculo.__init__(self, color, ruedas)
+
+        self.tipo = tipo
+    
+def __str__(self):
+    return Vehiculo.__str__(self) + ", {}".format(self.tipo)
+    
+def catalogar(self,lista):
+    for vehiculo in lista:
+        print(type(vehiculo).__name__,vehiculo.__dict__)
+
+
+
+c = Coche("azul", 4, 150, 1200)
+b = Bicicleta("negra",2,"bicicleta de montaña")
+lista = [b,c]
+print(lista)
